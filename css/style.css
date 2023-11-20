@@ -1,0 +1,450 @@
+:root {
+    --primary: #b6895b;
+    --bg: #fff;
+}
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #b6895b;
+}
+
+/* NavBar */
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(188, 108, 108, 0.8);
+    border-bottom: 1px solid #010101;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.NavBar .NavBar-logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #010101;
+    font-style: italic;
+}
+  
+
+.NavBar .NavBar-nav a {
+    color: #292490;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.NavBar .NavBar-logo span {
+    color: rgb(255, 230, 0);
+}
+
+.NavBar .NavBar-nav a:hover {
+    color: #010101;
+}
+
+.NavBar .NavBar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #b6895b;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.NavBar .NavBar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.NavBar .NavBar-extra a {
+    color: #fff;
+    margin: 0 0.2rem;
+}
+
+.NavBar .NavBar-extra a:hover {
+    color: #010101;
+}
+
+#titiktiga-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../image/unnamed.jpg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    margin-left: 1rem;
+    margin-right: 8rem;
+    margin-top: 5rem;
+    
+}
+
+.hero .content {
+    padding: 3rem 3%;
+    max-width: 30rem;
+    margin-left: 4rem;
+}
+
+.hero .content h1 {
+    font-size: 4em;
+    color: #b6895b;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+}
+
+.hero .content h2 {
+    font-size: 1.6em;
+    color: #b6895b;
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+}
+
+.hero .content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+
+}
+
+.hero .content .cta {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #b6895b;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5)
+}
+
+/* Hero Section End */
+
+/* Akun Section Start */
+.Akun,
+.Professional {
+    padding: 8rem 7% 3rem;
+}
+
+.Akun h1, 
+.Professional h1 { 
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.Akun .row {
+    display: flex;
+
+}
+
+.Akun .row .Akun-image {
+    flex: 1 1 45rem;
+
+}
+
+.Akun .row .Akun-image image {
+    width: 50%;
+
+}
+
+.Akun .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+
+}
+
+.Akun .row .content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+
+}
+
+.Akun .row .content p {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 100;
+    line-height: 1.6rem;
+}
+
+/* Footer */
+footer {
+    background-color: #b6895b;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    color: #fff;
+}
+
+footer .socials {
+    padding: 1rem  0;
+    color: #fff;
+}
+
+footer .socials a {
+    padding: 1rem  0;
+    color: #fff;
+    margin: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer .socials a:hover {
+    color: #010101;
+}
+
+footer .Credit {
+    font-size: 0.8rem;
+}
+
+footer .Credit a {
+    color: #010101;
+    font-weight: 700;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+    
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62%;
+    }
+    #titiktiga-menu {
+        display: inline-block;
+    }
+    .NavBar .NavBar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: rgba(188, 108, 108, 0.8);
+        width: 20rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .NavBar .NavBar-nav.active {
+        right: 0;
+    }
+    .NavBar .NavBar-nav a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .NavBar .NavBar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .NavBar .NavBar-nav a:hover::after {
+        transform: scaleX(0.5);
+    }
+    .Akun .row {
+        flex-wrap: wrap;
+    }
+
+    .Akun .row .Akun-image image {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .Akun .row .content {
+        padding: 0;
+    }
+
+    .Akun .row .content h2 {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .Akun .row .content p {
+        font-size: 1rem;
+    }
+
+
+    
+}
+
+
+/* Professional Section */
+
+.Professional .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    color: #fff;
+    
+}
+
+.Professional .row .Professional-icon {
+    text-align: center;
+    background-color: #b6895b;
+    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    max-width: 25rem;
+
+}
+
+.Professional .row .Professional-icon .Professional-icon-tittle {
+    margin: 1.5rem auto 1rem;
+    font-size: 1.5rem;
+}
+
+/* Education Section */
+#Experience {
+    padding: 8rem 7% 3rem;
+}
+
+.Experience h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.Experience-grid {
+    display:grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+}
+
+.Education {
+    display: flex;
+    gap: 1rem;
+}
+
+.Education .line {
+    padding: 0 0.7rem;
+}
+
+.Education .line div {
+    width: 2px;
+    height: 100%;
+    background: #010101;
+    position: relative;
+}
+
+.Education-info p {
+    margin: 0.6rem 0 1.4rem;
+}
+
+.Education-years {
+    margin-bottom: 2rem;
+}
+
+.Education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #010101;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.Experience-right {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* Contact Section */
+#Contact {
+    padding: 8rem 7% 3rem;
+}
+
+.Contact h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.Contact-grid {
+    display: grid;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.Contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.Contact-form input,
+.Contact-form textarea {
+    width: 100%;
+    padding: 0.7rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #e1b68a;
+    border: 1px solid #010101;
+    border-radius: 3px;
+    resize: none;
+
+}
+
+
+.btn {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: #010101;
+    color:#fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: #b6895b;
+}
+
+.Contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+
+
+}
+
+.Contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+}
+
+
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+    
+}
+
+
+
+
+
+
+
